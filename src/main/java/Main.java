@@ -27,7 +27,11 @@ public class Main {
 
         total = BigDecimal.valueOf((balance / 100 * rate + balance)).setScale(2, RoundingMode.DOWN);
 
+
         System.out.println("Interest rate is: " + rate);
         System.out.println("Your balance is: " + total);
+        if (balance < 1) {
+            System.out.println("Your balance should be more than $1 to obtain interest rate");
+        }
     }
 }
